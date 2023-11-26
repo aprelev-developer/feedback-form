@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/font-style.css">
+    <title></title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="#sql">Тестирование на знание SQL</a></li>
+            <li><a href="#form">Форма обратной связи</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="block" id="sql">
+        <h1>Тестирование на знание SQL</h1>
+        <h4>SQL-код</h4>
+        <p>SELECT users.id, users.name, groups.name AS name_group
+            FROM users
+            JOIN groups ON users.group = groups.id
+            WHERE users.group = 1;
+        </p>
+    </div>
+
+    <div class="block" id="form">
+        <h2>Форма обратной связи</h2>
+        <form action="Controller/index.php" method="post">
+            <div class="validate-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+
+    </div>
+</main>
+</body>
+</html>
